@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Create Account</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 40px 50px;
+      border-radius: 20px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 400px;
+    }
+
+    h2 {
+      color: #fff;
+      margin-bottom: 30px;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+      padding: 12px;
+      width: 100%;
+      border: none;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      outline: none;
+      background: rgba(255, 255, 255, 0.25);
+      color: #fff;
+      font-size: 14px;
+      backdrop-filter: blur(5px);
+      box-shadow: inset 0 0 5px rgba(255,255,255,0.3);
+    }
+
+    input::placeholder {
+      color: #eee;
+    }
+
+    .btn {
+      width: 100%;
+      padding: 12px;
+      background: linear-gradient(to right, #ff5f6d, #ffc371);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 15px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+      transition: transform 0.2s ease;
+    }
+
+    .btn:hover {
+      transform: scale(1.02);
+    }
+
+    .login-link {
+      color: #ffffff;
+      font-size: 14px;
+    }
+
+    .login-link a {
+      color: #00ffff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .login-link a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <form class="container" action="create" method="post">
+    <h2>Create Account</h2>
+    <input type="text" name="name" placeholder="Full Name" required />
+    <input type="text" name="username" placeholder="Username" required />
+    <input type="email" name="email" placeholder="Email Address" required />
+    <input type="password" name="password" placeholder="Password" required />
+    <button class="btn" type="submit">Register</button>
+    <div class="login-link">
+      Already have an account? <a href="login.html">Login here</a>
+    </div>
+
+    <div style="margin-top: 20px;">
+    <a href="index.html" style="color: white; background-color: crimson; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: bold; box-shadow: 0 0 10px red;">
+    ← Back to Home
+    </a>
+    </div>
+
+  </form>
+</body>
+</html>

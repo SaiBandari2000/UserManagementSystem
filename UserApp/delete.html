@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Delete User</title>
+  <style>  
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #a8edea, #fed6e3, #a8edea); /* Light blue-green gradient */
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .delete-box {
+      background: rgba(0, 0, 0, 0.5);
+      padding: 40px 50px 50px;
+      border-radius: 20px;
+      box-shadow: 0 0 30px rgba(255, 0, 0, 0.5);
+      text-align: center;
+      max-width: 400px;
+      width: 100%;
+      border: 1px solid rgba(255, 0, 0, 0.3);
+    }
+
+    .delete-box h2 {
+      color: #ff4c4c;
+      margin-bottom: 30px;
+      font-size: 28px;
+      text-shadow: 0 0 10px red;
+    }
+
+    .delete-box input[type="text"] {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 25px;
+      background-color: rgba(255, 255, 255, 0.15);
+      border: none;
+      border-radius: 10px;
+      color: white;
+      font-size: 16px;
+      text-align: center;
+    }
+
+    .delete-box input[type="text"]::placeholder {
+      color: #ccc;
+    }
+
+    .delete-box button {
+      padding: 12px 25px;
+      background: linear-gradient(to right, #ff1e56, #ff4c4c);
+      border: none;
+      color: white;
+      border-radius: 30px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 0 15px red;
+      transition: 0.3s ease-in-out;
+      width: 100%;
+    }
+
+    .delete-box button:hover {
+      background: linear-gradient(to right, #ff4c4c, #ff1e56);
+      box-shadow: 0 0 20px red;
+    }
+
+    .home-link {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: crimson;
+      color: white;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 0 10px red;
+      transition: 0.3s ease;
+    }
+
+    .home-link:hover {
+      background-color: #e60000;
+    }
+
+    .note {
+      margin-top: 20px;
+      color: #ff9999;
+      font-style: italic;
+      font-size: 14px;
+      text-shadow: 0 0 5px rgba(255, 0, 0, 0.4);
+    }
+  </style>
+</head>
+<body>
+  <div class="delete-box">
+    <h2>Delete User</h2>
+    <form action="DeleteServlet" method="post">
+      <input type="text" name="username" placeholder="Enter Username" required />
+      <button type="submit">Delete User</button>
+    </form>
+
+    <!-- ✅ Back to Home Button Centered Below -->
+    <a href="index.html" class="home-link">← Back to Home</a>
+
+    <div class="note">Note: Enter the correct username to remove user data permanently.</div>
+  </div>
+</body>
+</html>
